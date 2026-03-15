@@ -252,7 +252,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.28, ease: 'easeOut' }}
           >
-            Людмила и Владислав
+            Людмила  и  Владислав
           </motion.div>
 
           <motion.div
@@ -279,9 +279,9 @@ export default function App() {
 
         <AnimatedSection className="center-section" delay={0.05}>
           <div className="big-heading comforter-title">
-            ДОРОГИЕ
+            Дорогие
             <br />
-            РОДНЫЕ И ДРУЗЬЯ!
+            родные  и  друзья!
           </div>
           <p className="body-text intro-text">
             Мы очень хотим сделать этот день особенным, поэтому приглашаем Вас разделить с нами
@@ -292,7 +292,7 @@ export default function App() {
         <AnimatedSection className="location-section" variant="soft">
           <div className="location-card">
             <SectionTitle>
-              МЕСТО ПРОВЕДЕНИЯ
+              Место  проведения
               <br />
               ТОРЖЕСТВА
             </SectionTitle>
@@ -338,7 +338,7 @@ export default function App() {
         </AnimatedSection>
 
         <AnimatedSection className="center-section">
-          <SectionTitle>ПРОГРАММА ДНЯ</SectionTitle>
+          <SectionTitle>Программа  дня</SectionTitle>
           <div className="timeline-list">
             {timeline.map((item, index) => (
               <TimelinePill key={`${item.time}-${item.title}`} item={item} delay={index * 0.08} />
@@ -351,7 +351,7 @@ export default function App() {
         </AnimatedSection>
 
         <AnimatedSection className="center-section">
-          <SectionTitle>ДРЕСС-КОД</SectionTitle>
+          <SectionTitle>Дресс-код</SectionTitle>
           <p className="body-text dress-text">
             Мы очень старались сделать праздник красивым и будем рады, если в своих нарядах Вы
             поддержите цветовую гамму нашей свадьбы!
@@ -383,7 +383,7 @@ export default function App() {
         </AnimatedSection>
 
         <AnimatedSection className="center-section">
-          <SectionTitle>ДЕТАЛИ</SectionTitle>
+          <SectionTitle>Детали</SectionTitle>
           <div className="details-list">
             <DetailCard delay={0.02}>
               Свои тёплые слова и пожелания приносите в сердцах, а подарки – в конверте.
@@ -396,7 +396,7 @@ export default function App() {
         </AnimatedSection>
 
         <AnimatedSection className="center-section" variant="soft">
-          <SectionTitle>ЧАТ ДЛЯ ГОСТЕЙ</SectionTitle>
+          <SectionTitle>Чат  для  гостей</SectionTitle>
 
           <div className="chat-text body-text">
             <p>
@@ -442,7 +442,7 @@ export default function App() {
         </AnimatedSection>
 
         <AnimatedSection className="center-section contacts-section" variant="soft">
-          <SectionTitle>КОНТАКТЫ</SectionTitle>
+          <SectionTitle>Контакты</SectionTitle>
 
           <div className="contacts-card-wrap">
             <DetailCard delay={0.03}>
@@ -460,7 +460,7 @@ export default function App() {
             transition={{ duration: 0.85, delay: 0.08, ease: 'easeOut' }}
           >
             <span className="closing-prefix">С любовью</span>
-            <span className="closing-names comforter-title">Людмила и Владислав</span>
+            <span className="closing-names comforter-title">Людмила  и  Владислав</span>
           </motion.div>
 
           <motion.div
