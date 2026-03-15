@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -37,7 +37,7 @@ img {
 }
 
 .comforter-title {
-  font-family: 'Comforter', cursive;
+  font-family: 'Great Vibes', cursive;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
@@ -83,8 +83,8 @@ img {
 
 .hero-names {
   margin-bottom: 32px;
-  font-size: clamp(38px, 10vw, 72px);
-  line-height: 0.95;
+  font-size: clamp(42px, 9vw, 70px);
+  line-height: 1;
   color: #2f2e2b;
   white-space: nowrap;
 }
@@ -476,7 +476,7 @@ img {
 
 .closing-names {
   margin-top: 8px;
-  font-size: clamp(38px, 10vw, 64px);
+  font-size: clamp(40px, 9vw, 62px);
   line-height: 1;
   color: #3a3936;
   white-space: nowrap;
