@@ -382,7 +382,7 @@ export default function App() {
           </motion.div>
         </AnimatedSection>
 
-                <AnimatedSection className="center-section questionnaire-section" variant="soft">
+                      <AnimatedSection className="center-section questionnaire-section" variant="soft">
           <div className="questionnaire-card">
             <div className="questionnaire-heart questionnaire-heart-left">♡</div>
             <div className="questionnaire-heart questionnaire-heart-right">♡</div>
@@ -449,10 +449,6 @@ export default function App() {
                   </label>
                   <label className="questionnaire-option">
                     <input type="checkbox" />
-                    <span>Водка</span>
-                  </label>
-                  <label className="questionnaire-option">
-                    <input type="checkbox" />
                     <span>Виски + кола</span>
                   </label>
                   <label className="questionnaire-option">
@@ -466,13 +462,15 @@ export default function App() {
                 <label className="questionnaire-label">Комментарий или пожелания</label>
                 <textarea
                   className="questionnaire-textarea"
-                  placeholder="Например: есть аллергия, нужен детский стул, не употребляю алкоголь и т.д."
+                  placeholder="Например: не употребляю алкоголь, есть аллергия, нужен детский стул и т.д."
                 />
               </div>
 
-              <button type="button" className="questionnaire-submit">
-                ОТПРАВИТЬ
-              </button>
+              <div className="questionnaire-submit-wrap">
+                <button type="button" className="questionnaire-submit">
+                  ОТПРАВИТЬ
+                </button>
+              </div>
             </form>
           </div>
         </AnimatedSection>
