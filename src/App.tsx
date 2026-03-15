@@ -38,6 +38,7 @@ const weddingDate = new Date('2026-08-30T15:00:00')
 const venueImage =
   'https://img.arendazala.net/pcpYKZHNBtIq5_xLFkVQl6NKqQXY400iIvGYAFQzqnyMofofuAAkipENeSt6t4gSbcJVW2858lcp22HtYCqqXNQzcjNZx9R6TEg3Zw=w560-h332-n-l95-rw'
 const heroImage = '/hero.jpg'
+const countdownImage = '/countdown.jpg'
 const mapUrl =
   'https://2gis.ru/irkutsk/search/%D0%BF%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0%20%D1%85%D0%BE%D0%BB%D0%BB/firm/70000001100068753/104.325811%2C52.22267?m=104.280722%2C52.28858%2F10.86'
 
@@ -185,7 +186,11 @@ function CountdownCard({ countdown }: { countdown: CountdownParts }) {
 
   return (
     <div className="countdown-card">
-      <PhotoPlaceholder label="ФОТО" tone="soft" className="countdown-photo" />
+      <img
+        src={countdownImage}
+        alt="Фото пары"
+        className="countdown-photo-image"
+      />
       <div className="countdown-darken" />
       <div className="countdown-overlay">
         <div className="countdown-heading">До свадьбы осталось...</div>
