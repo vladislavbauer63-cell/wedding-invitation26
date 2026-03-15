@@ -294,7 +294,7 @@ export default function App() {
             <SectionTitle>
               Место  проведения
               <br />
-              ТОРЖЕСТВА
+              торжества
             </SectionTitle>
 
             <div className="location-label">ЖДЕМ ВАС ПО АДРЕСУ:</div>
