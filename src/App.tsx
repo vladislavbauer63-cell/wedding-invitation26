@@ -382,6 +382,101 @@ export default function App() {
           </motion.div>
         </AnimatedSection>
 
+                <AnimatedSection className="center-section questionnaire-section" variant="soft">
+          <div className="questionnaire-card">
+            <div className="questionnaire-heart questionnaire-heart-left">♡</div>
+            <div className="questionnaire-heart questionnaire-heart-right">♡</div>
+
+            <div className="questionnaire-title comforter-title">Анкета</div>
+            <p className="questionnaire-subtitle">
+              Пожалуйста, подтвердите свое присутствие
+            </p>
+
+            <form className="questionnaire-form">
+              <div className="questionnaire-field">
+                <label className="questionnaire-label">Ваше Имя и Фамилия</label>
+                <input
+                  type="text"
+                  className="questionnaire-input"
+                  placeholder="ФИО"
+                />
+              </div>
+
+              <div className="questionnaire-field">
+                <div className="questionnaire-label">Вы сможете присутствовать?</div>
+                <div className="questionnaire-options">
+                  <label className="questionnaire-option">
+                    <input type="radio" name="attendance" />
+                    <span>Да</span>
+                  </label>
+                  <label className="questionnaire-option">
+                    <input type="radio" name="attendance" />
+                    <span>К сожалению, нет</span>
+                  </label>
+                </div>
+              </div>
+
+              <div className="questionnaire-field">
+                <div className="questionnaire-label">Какое горячее Вы предпочитаете?</div>
+                <div className="questionnaire-options">
+                  <label className="questionnaire-option">
+                    <input type="radio" name="food" />
+                    <span>Мясо</span>
+                  </label>
+                  <label className="questionnaire-option">
+                    <input type="radio" name="food" />
+                    <span>Рыба</span>
+                  </label>
+                  <label className="questionnaire-option">
+                    <input type="radio" name="food" />
+                    <span>Курица</span>
+                  </label>
+                </div>
+              </div>
+
+              <div className="questionnaire-field">
+                <div className="questionnaire-label">
+                  Уточните Ваши предпочтения в напитках, выбрав один или несколько вариантов:
+                </div>
+                <div className="questionnaire-options">
+                  <label className="questionnaire-option">
+                    <input type="checkbox" />
+                    <span>Шампанское</span>
+                  </label>
+                  <label className="questionnaire-option">
+                    <input type="checkbox" />
+                    <span>Вино</span>
+                  </label>
+                  <label className="questionnaire-option">
+                    <input type="checkbox" />
+                    <span>Водка</span>
+                  </label>
+                  <label className="questionnaire-option">
+                    <input type="checkbox" />
+                    <span>Виски + кола</span>
+                  </label>
+                  <label className="questionnaire-option">
+                    <input type="checkbox" />
+                    <span>Безалкогольные напитки</span>
+                  </label>
+                </div>
+              </div>
+
+              <div className="questionnaire-field">
+                <label className="questionnaire-label">Комментарий или пожелания</label>
+                <textarea
+                  className="questionnaire-textarea"
+                  placeholder="Например: есть аллергия, нужен детский стул, не употребляю алкоголь и т.д."
+                />
+              </div>
+
+              <button type="button" className="questionnaire-submit">
+                ОТПРАВИТЬ
+              </button>
+            </form>
+          </div>
+        </AnimatedSection>
+
         <AnimatedSection className="center-section">
           <SectionTitle>Детали</SectionTitle>
           <div className="details-list">
