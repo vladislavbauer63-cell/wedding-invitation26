@@ -479,6 +479,21 @@ img {
     radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.18), transparent 20%);
 }
 
+.dress-single-wrap {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.dress-single-photo {
+  width: 100%;
+  max-width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
 .countdown-photo-image {
   width: 100%;
   height: 300px;

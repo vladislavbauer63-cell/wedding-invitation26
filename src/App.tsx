@@ -33,12 +33,13 @@ const timeline: TimelineItem[] = [
   },
 ]
 
-const palette = ['#A4A197', '#6C6F38', '#354629', '#9A001E', '#7A1118']
+const palette = ['#A4A197', '#6C6F38', '#5B3A29', '#9A001E', '#7A1118']
 const weddingDate = new Date('2026-08-30T15:00:00')
 const venueImage =
   'https://img.arendazala.net/pcpYKZHNBtIq5_xLFkVQl6NKqQXY400iIvGYAFQzqnyMofofuAAkipENeSt6t4gSbcJVW2858lcp22HtYCqqXNQzcjNZx9R6TEg3Zw=w560-h332-n-l95-rw'
 const heroImage = '/hero.jpg'
 const countdownImage = '/countdown.jpg'
+const dressCodeImage = '/dresscode.jpg'
 const mapUrl =
   'https://2gis.ru/irkutsk/search/%D0%BF%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0%20%D1%85%D0%BE%D0%BB%D0%BB/firm/70000001100068753/104.325811%2C52.22267?m=104.280722%2C52.28858%2F10.86'
 
@@ -387,25 +388,19 @@ export default function App() {
             ))}
           </div>
 
-          <div className="dress-images">
-            <motion.div
-              initial={{ opacity: 0, x: -18, y: 12 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.75, ease: 'easeOut' }}
-            >
-              <PhotoPlaceholder label="ЖЕНСКИЙ ОБРАЗ" tone="olive" className="dress-photo" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 18, y: 12 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.75, delay: 0.08, ease: 'easeOut' }}
-            >
-              <PhotoPlaceholder label="МУЖСКОЙ ОБРАЗ" tone="cool" className="dress-photo" />
-            </motion.div>
-          </div>
+          <motion.div
+  className="dress-single-wrap"
+  initial={{ opacity: 0, y: 12, scale: 0.98 }}
+  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+  viewport={{ once: true, amount: 0.35 }}
+  transition={{ duration: 0.75, ease: 'easeOut' }}
+>
+  <img
+    src={dressCodeImage}
+    alt="Дресс-код"
+    className="dress-single-photo"
+  />
+</motion.div>
         </AnimatedSection>
 
         <AnimatedSection className="center-section">
