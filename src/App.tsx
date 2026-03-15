@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion'
-import { useEffect, useMemo, useState, type ReactNode } from 'react'
+import { useEffect, useMemo, useState, type ReactNode, type FormEvent } from 'react'
 import './App.css'
 
 type TimelineItem = {
@@ -58,6 +58,8 @@ const fadeUp: Variants = {
     },
   },
 }
+
+const formUrl = 'https://script.google.com/macros/s/AKfycbyEPPD5-aWy0-G8IbGBIdFdF0D7IvjRvC60wFXwdwZ1qqtXe2xmZTSgz7p1NFI-XsH_Kg/exec'
 
 const softReveal: Variants = {
   hidden: { opacity: 0, scale: 0.98, y: 18 },
@@ -200,7 +202,62 @@ function CountdownCard({ countdown }: { countdown: CountdownParts }) {
 
 export default function App() {
   const [countdown, setCountdown] = useState<CountdownParts>(() => getCountdown(weddingDate))
+  const [guestName, setGuestName] = useState('')
+  const [attendance, setAttendance] = useState('')
+  const [food, setFood] = useState('')
+  const [drinks, setDrinks] = useState<string[]>([])
+  const [comment, setComment] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
 
+  function toggleDrink(drink: string) {
+    setDrinks((prev) =>
+      prev.includes(drink) ? prev.filter((item) => item !== drink) : [...prev, drink]
+    )
+  }
+
+  async function handleQuestionnaireSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    if (!guestName.trim()) {
+      setSubmitMessage('Пожалуйста, укажите имя и фамилию.')
+      return
+    }
+
+    if (!attendance) {
+      setSubmitMessage('Пожалуйста, выберите, сможете ли Вы присутствовать.')
+      return
+    }
+
+    setIsSubmitting(true)
+    setSubmitMessage('')
+
+    try {
+      const formData = new FormData()
+      formData.append('name', guestName.trim())
+      formData.append('attendance', attendance)
+      formData.append('food', food)
+      formData.append('drinks', drinks.join(', '))
+      formData.append('comment', comment.trim())
+
+      await fetch(formUrl, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors',
+      })
+
+      setSubmitMessage('Спасибо! Ваш ответ сохранён.')
+      setGuestName('')
+      setAttendance('')
+      setFood('')
+      setDrinks([])
+      setComment('')
+    } catch (error) {
+      setSubmitMessage('Не удалось отправить анкету. Попробуйте ещё раз.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   useEffect(() => {
     const timer = window.setInterval(() => {
       setCountdown(getCountdown(weddingDate))
