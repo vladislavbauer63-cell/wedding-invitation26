@@ -127,7 +127,7 @@ function AnimatedSection({
 }
 
 function SectionTitle({ children }: { children: ReactNode }) {
-  return <h2 className="section-title">{children}</h2>
+  return <h2 className="section-title comforter-title">{children}</h2>
 }
 
 function TimelinePill({ item, delay = 0 }: { item: TimelineItem; delay?: number }) {
@@ -247,7 +247,7 @@ export default function App() {
           </motion.div>
 
           <motion.div
-            className="hero-names"
+            className="hero-names comforter-title"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.28, ease: 'easeOut' }}
@@ -278,7 +278,7 @@ export default function App() {
         </AnimatedSection>
 
         <AnimatedSection className="center-section" delay={0.05}>
-          <div className="big-heading">
+          <div className="big-heading comforter-title">
             ДОРОГИЕ
             <br />
             РОДНЫЕ И ДРУЗЬЯ!
@@ -390,8 +390,7 @@ export default function App() {
             </DetailCard>
 
             <DetailCard delay={0.1}>
-              Приятным комплиментом для нас будет, если вместо цветов Вы решите подарить нам
-              бутылочку вина для нашей семейной винотеки.
+              Приятным комплиментом для нас будет, если вместо цветов Вы подарите бутылочку алкогольного напитка для пополнения нашей семейной коллекции.
             </DetailCard>
           </div>
         </AnimatedSection>
@@ -430,16 +429,16 @@ export default function App() {
           </div>
 
           <motion.a
-  href="https://t.me/+KhFOvuBvafc4YmE6"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="chat-button"
-  whileHover={{ y: -2, scale: 1.015 }}
-  whileTap={{ scale: 0.985 }}
-  transition={{ duration: 0.25 }}
->
-  ВСТУПИТЬ В ЧАТ
-</motion.a>
+            href="https://t.me/+KhFOvuBvafc4YmE6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="chat-button"
+            whileHover={{ y: -2, scale: 1.015 }}
+            whileTap={{ scale: 0.985 }}
+            transition={{ duration: 0.25 }}
+          >
+            ВСТУПИТЬ В ЧАТ
+          </motion.a>
         </AnimatedSection>
 
         <AnimatedSection className="center-section contacts-section" variant="soft">
@@ -460,9 +459,8 @@ export default function App() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.85, delay: 0.08, ease: 'easeOut' }}
           >
-            С любовью,
-            <br />
-            Людмила и Владислав!
+            <span className="closing-prefix">С любовью</span>
+            <span className="closing-names comforter-title">Людмила и Владислав</span>
           </motion.div>
 
           <motion.div

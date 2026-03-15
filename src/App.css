@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #4a4945;
 }
 
@@ -34,18 +36,18 @@ img {
   text-align: center;
 }
 
-.hero-invite,
-.hero-names,
-.closing-text {
-  font-family: Georgia, 'Times New Roman', serif;
+.comforter-title {
+  font-family: 'Comforter', cursive;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .hero-invite {
   margin-bottom: 32px;
   font-size: 38px;
   line-height: 1.15;
+  font-weight: 500;
   color: #30302e;
 }
 
@@ -81,9 +83,10 @@ img {
 
 .hero-names {
   margin-bottom: 32px;
-  font-size: 42px;
-  line-height: 1.15;
+  font-size: clamp(38px, 10vw, 72px);
+  line-height: 0.95;
   color: #2f2e2b;
+  white-space: nowrap;
 }
 
 .hero-date {
@@ -108,19 +111,9 @@ img {
   background: #232321;
 }
 
-.hero-date-text,
-.hero-date-number,
-.section-title,
-.big-heading,
-.timeline-time,
-.timeline-title,
-.countdown-heading,
-.closing-date {
-  font-family: Georgia, 'Times New Roman', serif;
-}
-
 .hero-date-text {
   font-size: 26px;
+  font-weight: 500;
 }
 
 .hero-date-text.lower {
@@ -132,13 +125,14 @@ img {
   font-size: 78px;
   line-height: 1;
   font-style: italic;
+  font-weight: 700;
   color: #000;
 }
 
 .big-heading {
   margin-bottom: 20px;
-  font-size: 34px;
-  line-height: 1.05;
+  font-size: clamp(44px, 12vw, 68px);
+  line-height: 0.9;
   color: #2f2e2b;
 }
 
@@ -175,9 +169,8 @@ img {
 
 .section-title {
   margin: 0;
-  font-size: 28px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+  font-size: clamp(44px, 12vw, 64px);
+  line-height: 0.92;
   color: #2f2e2b;
 }
 
@@ -273,6 +266,7 @@ img {
   border-radius: 999px;
   background: #b7bcad;
   font-size: 18px;
+  font-weight: 600;
   color: #2f2e2b;
 }
 
@@ -287,6 +281,7 @@ img {
 
 .timeline-title {
   font-size: 16px;
+  font-weight: 600;
   letter-spacing: 0.02em;
   color: #4b4a46;
 }
@@ -333,6 +328,7 @@ img {
 .countdown-heading {
   margin-bottom: 28px;
   font-size: 26px;
+  font-weight: 600;
 }
 
 .countdown-grid {
@@ -357,6 +353,7 @@ img {
 .countdown-number {
   font-size: 18px;
   line-height: 1;
+  font-weight: 600;
 }
 
 .countdown-label {
@@ -465,14 +462,30 @@ img {
 
 .closing-text {
   margin-top: 48px;
-  font-size: 38px;
-  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #3a3936;
+}
+
+.closing-prefix {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.closing-names {
+  margin-top: 8px;
+  font-size: clamp(38px, 10vw, 64px);
+  line-height: 1;
+  color: #3a3936;
+  white-space: nowrap;
 }
 
 .closing-date {
   margin-top: 16px;
   font-size: 24px;
+  font-weight: 500;
   color: #55544f;
 }
 
@@ -495,22 +508,6 @@ img {
 
   .hero-invite {
     font-size: 48px;
-  }
-
-  .hero-names {
-    font-size: 54px;
-  }
-
-  .big-heading {
-    font-size: 42px;
-  }
-
-  .section-title {
-    font-size: 34px;
-  }
-
-  .closing-text {
-    font-size: 50px;
   }
 
   .chat-images {
