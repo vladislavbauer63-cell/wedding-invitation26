@@ -441,31 +441,34 @@ setIsSubmitted(true)
           </motion.div>
         </AnimatedSection>
 
-                            <AnimatedSection className="center-section questionnaire-section" variant="soft">
+                           <AnimatedSection className="center-section questionnaire-section" variant="soft">
   <motion.div
-  className="questionnaire-card"
-  layout
-  transition={{ duration: 0.45, ease: 'easeOut' }}
->
+    className="questionnaire-card"
+    layout
+    transition={{ duration: 0.45, ease: 'easeOut' }}
+  >
     <div className="questionnaire-heart questionnaire-heart-left">♡</div>
     <div className="questionnaire-heart questionnaire-heart-right">♡</div>
 
     <div className="questionnaire-title comforter-title">Анкета</div>
-    <p className="questionnaire-subtitle">
-      Пожалуйста, подтвердите свое присутствие
-    </p>
 
-   {isSubmitted ? (
-  <motion.div
-    className="questionnaire-message questionnaire-message-success"
-    initial={{ opacity: 0, y: 8 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.35, ease: 'easeOut' }}
-  >
-    Спасибо! Ваш ответ сохранён.
-  </motion.div>
-) : (
-  <form className="questionnaire-form" onSubmit={handleQuestionnaireSubmit}>
+    {!isSubmitted && (
+      <p className="questionnaire-subtitle">
+        Пожалуйста, подтвердите свое присутствие
+      </p>
+    )}
+
+    {isSubmitted ? (
+      <motion.div
+        className="questionnaire-message questionnaire-message-success"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, ease: 'easeOut' }}
+      >
+        Спасибо! Ваш ответ сохранён.
+      </motion.div>
+    ) : (
+      <form className="questionnaire-form" onSubmit={handleQuestionnaireSubmit}>
     <div className="questionnaire-field">
       <label className="questionnaire-label">Ваше Имя и Фамилия</label>
       <input
